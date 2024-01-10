@@ -1,0 +1,42 @@
+[workspace]
+members = [
+#    "ios-example/"
+]
+
+[package]
+name = "coremotion"
+version = "0.0.1"
+authors = ["Joshua Pedrick <joshua.pedrick@gmail.com>"]
+edition = "2021"
+keywords = ["ios", "coremotion", "accelerometer", "gyroscope", "magnetometer"]
+repository = "https://github.com/jpedrick/coremotion"
+documentation = "https://jpedrick.github.io/coremotion"
+categories = ["coremotion", "ios"]
+license = "MIT or Apache 2.0"
+description = "CoreMotion bindings for iOS"
+
+[package.metadata.bundle]
+name = "coremotion"
+identifier = "com.github.jpedrick.coremotion"
+category = "Utility"
+short_description = "CoreMotion bindings for Rust"
+long_description = """
+"""
+
+[dependencies]
+clang-sys = "1.7.0"
+objc = "0.2.7"
+block = "0.1.6"
+
+[build-dependencies]
+bindgen = { version = "0.69.1", default-features = true}
+
+#[build]
+#rustflags = ["-C", "link-arg=-Wl,-rpath,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"]
+
+[target.'cfg(target_os = "ios")'.dependencies]
+objc = "0.2.7"
+block = "0.1.6"
+
+[patch.crates-io]
+#bindgen = { git = "https://github.com/simlay/rust-bindgen.git", branch = "objc-category-inheritance" }
