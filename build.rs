@@ -1,9 +1,4 @@
-use std::{
-    env,
-    path::PathBuf,
-    fs,
-    io::Error,
-};
+use std::{env, fs, io::Error, path::PathBuf};
 
 fn sdk_path(target: &str) -> Result<String, std::io::Error> {
     use std::process::Command;
@@ -82,7 +77,10 @@ fn build(sdk_path: Option<&str>, target: &str) -> Result<(), Error> {
             .blocklist_type("FndrOpaqueInfo")
             .blocklist_type("HFSCatalogFolder")
             .blocklist_file("Foundation/NSUnit.h")
-            .header_contents("CMMotionManager.h", "#include<CoreMotion/CMMotionManager.h>");
+            .header_contents(
+                "CMMotionManager.h",
+                "#include<CoreMotion/CMMotionManager.h>",
+            );
 
         // Generate the bindings.
         let bindings = builder.generate().expect("unable to generate bindings");

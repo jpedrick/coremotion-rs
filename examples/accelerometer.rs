@@ -1,11 +1,8 @@
-use coremotion::{
-    CMMotionManager,
-    ICMMotionManager, ICMAccelerometerData,
-    INSObject,
-};
+use coremotion::{CMMotionManager, ICMAccelerometerData, ICMMotionManager, INSObject};
 
-use oslog::OsLogger;
 use log::LevelFilter;
+use oslog::OsLogger;
+
 fn main() {
     OsLogger::new("com.simlay.net")
         .level_filter(LevelFilter::Debug)
