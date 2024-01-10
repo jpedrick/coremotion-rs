@@ -31,6 +31,10 @@ block = "0.1.6"
 [build-dependencies]
 bindgen = { version = "0.69.1", default-features = true}
 
+[dev-dependencies]
+oslog = { git = "https://github.com/steven-joruk/oslog.git" }
+log = "0.4.20"
+
 #[build]
 #rustflags = ["-C", "link-arg=-Wl,-rpath,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"]
 
