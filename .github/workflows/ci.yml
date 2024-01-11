@@ -21,6 +21,6 @@ jobs:
         tool: cargo-dinghy@0.6.8
     - name: boot iOS simulator
       run: |
-        xcrun simctl boot $(xcrun simctl list devices 'iOS' --json | jq '.devices | with_entries( select(.key|contains("iOS"))) | .[] | [ .[].name ] | map( select(contains("iPhone")) ) | sort | .[0] ' | jq -r)
+        xcrun simctl boot "$(xcrun simctl list devices 'iOS' --json | jq '.devices | with_entries( select(.key|contains("iOS"))) | .[] | [ .[].name ] | map( select(contains("iPhone")) ) | sort | .[0] ' | jq -r)"
     - name: run accelerometer example
       run: cargo run --example accelerometer --target x86_64-apple-ios
