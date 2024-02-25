@@ -4,7 +4,7 @@ members = [
 ]
 
 [package]
-name = "coremotion"
+name = "coremotion-rs"
 version = "0.0.1"
 authors = ["Joshua Pedrick <joshua.pedrick@gmail.com>"]
 edition = "2021"
