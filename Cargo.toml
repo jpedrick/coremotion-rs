@@ -12,7 +12,7 @@ keywords = ["ios", "coremotion", "accelerometer", "gyroscope", "magnetometer"]
 repository = "https://github.com/jpedrick/coremotion"
 documentation = "https://jpedrick.github.io/coremotion"
 categories = ["coremotion", "ios"]
-license = "MIT or Apache 2.0"
+license = "MIT"
 description = "CoreMotion bindings for iOS"
 
 [package.metadata.bundle]
