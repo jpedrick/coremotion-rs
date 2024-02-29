@@ -5,11 +5,11 @@ members = [
 
 [package]
 name = "coremotion-rs"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Joshua Pedrick <joshua.pedrick@gmail.com>"]
 edition = "2021"
 keywords = ["ios", "coremotion", "accelerometer", "gyroscope", "magnetometer"]
-repository = "https://github.com/jpedrick/coremotion"
+repository = "https://github.com/jpedrick/coremotion-rs"
 documentation = "https://jpedrick.github.io/coremotion"
 categories = ["coremotion", "ios"]
 license = "MIT"
